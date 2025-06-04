@@ -48,7 +48,7 @@ The shell scripts (`.sh` files) require a Unix-like shell environment (Linux, ma
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/Md-Arif-Hasan/Test-Smell-Research.git
+git clone https://github.com/<your-username>/Test-Smell-Research.git
 cd Test-Smell-Research
 ```
 
