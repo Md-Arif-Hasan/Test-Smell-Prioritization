@@ -1,14 +1,16 @@
+
+
 # Python script (analyze_projects.py)
 import os
 import pandas as pd
 
 # Path to the directory containing Python projects
-projects_path = "/home/iit/Downloads/Thesis/Pynose_Projects"
+projects_path = ".../PynoseFullDatasetProjects"
 
 def analyze_projects():
     # Get absolute path for output directory
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    output_dir = os.path.join(current_dir, "ChangeProneness_analysis_results")
+    output_dir = os.path.join(current_dir, "123")
     
     # Create the output directory if it doesn't exist
     if not os.path.exists(output_dir):
@@ -30,9 +32,8 @@ def analyze_projects():
         csv_path = os.path.join(output_dir, csv_filename)
         
         # Run the bash script for analysis
-        command = f"bash CP.sh '{project}' '{project_path}' '{csv_path}'"
+        command = f"bash analyze_git_change_history.sh '{project}' '{project_path}' '{csv_path}'"
         os.system(command)
 
 if __name__ == "__main__":
     analyze_projects()
-
