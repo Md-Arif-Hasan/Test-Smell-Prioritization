@@ -85,6 +85,8 @@ To reproduce the results from this repository, follow these steps:
 3. Aggregate the results using the provided aggregation scripts (e.g., `SmellsSummary.py` or `SmellsPlusCPaggregated.py`).
 4. Review the output files for a summary of the test smells and their associated CP/FP scores.
 
+Paper Link: https://github.com/Md-Arif-Hasan/Test-Smell-Prioritization/blob/main/TestSmellPrioritization%23311.pdf
+
 ## Contributing
 
 Contributions to this repository are welcome! If you'd like to contribute, please fork the repository, make your changes, and submit a pull request.
