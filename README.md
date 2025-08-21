@@ -1,45 +1,53 @@
+# Test Smell Prioritization
 
-# Test Smell Prioritization based on Change Proneness and Fault Proneness
+This repository contains the artifact for the paper:  
+**"Prioritizing Test Smells: An Empirical Evaluation of Quality Metrics and Developer Perceptions" (ICSME 2025, NIER Track)**  
 
-This repository contains a set of Python scripts and shell tools designed for analyzing and prioritizing test smells based on Change Proneness (CP) and Fault Proneness (FP) metrics in Python-based software systems. The goal of this study is to help developers identify test smells that are more likely to affect the maintainability of the system, enabling them to prioritize refactoring efforts.
+The artifact provides Python scripts, datasets, and documentation to **detect and prioritize test smells** using Change Proneness (CP) and Fault Proneness (FP) metrics.  
+It enables reproduction of all **tables, figures, and prioritization results** presented in the paper.
 
-## Repository Contents
+---
 
-The repository includes various Python scripts and shell scripts that assist in the extraction and analysis of test smells and the computation of CP and FP metrics. Key functionalities include:
+## 📂 Repository Structure
 
-- **Test Smell Extraction**: Identifying various test smells in Python-based software.
-- **Change Proneness (CP) Analysis**: Calculating CP metrics to measure the likelihood of code changes.
-- **Fault Proneness (FP) Analysis**: Assessing FP metrics to determine the probability of faults occurring.
-- **Prioritization Algorithms**: Using CP and FP metrics to prioritize the test smells that need attention first.
-- **Data Aggregation**: Aggregating test smell and CP/FP results for easier analysis.
-- **File Format Conversion**: Converting data between XML, CSV, and other formats for compatibility.
+- **DatasetCollection/**  
+  Preprocessed datasets from 52 open-source Python projects.  
 
-## Prerequisites
+- **Test Smells Detection/**  
+  Scripts for detecting 15 types of test smells in Python-based projects.  
+  - `extract_smells.py` → Extracts test smells.  
 
-To run the code, make sure you have the following installed:
+- **Change Proneness_FaultProneness/**  
+  Scripts for CP and FP computation.  
+  - `ChangeProneness.py` → Computes Change Proneness metrics.  
+  - `FaultProneness.py` → Computes Fault Proneness metrics.  
 
-- Python 3.x (preferably the latest version)
-- Required Python packages (listed below)
-- Shell environment (for `.sh` scripts)
+- **Results/**  
+  Contains intermediate CSV files and aggregated results used in the paper.  
 
-### Install Dependencies
+- **SmellsSummary.py**  
+  Aggregates smell, CP, and FP data to reproduce summary tables.  
 
-You can install the necessary Python packages by running the following command:
+- **SmellsPlusCPaggregated.py**  
+  Generates combined prioritization results and quadrant visualizations.  
 
-```bash
-pip install -r requirements.txt
-```
+- **requirements.txt**  
+  Dependency list for reproducing the experiments.  
 
-If `requirements.txt` is not present, you can manually install the commonly used packages:
+- **LICENSE**  
+  MIT open-source license.  
 
-- pandas
-- numpy
-- matplotlib
-- xml.etree.ElementTree (for XML parsing)
+---
 
-### Shell Script Dependencies
+## ⚙️ Requirements
 
-The shell scripts (`.sh` files) require a Unix-like shell environment (Linux, macOS, or Windows with WSL).
+- **OS**: Linux/Ubuntu (preferred), macOS; Windows users can use WSL.  
+- **Python**: Version 3.8+  
+- **Hardware**: 8 GB RAM, ~2 GB disk space  
+- **Dependencies**: Install with:  
+  ```bash
+  pip install -r requirements.txt
+
 
 ## Usage
 
